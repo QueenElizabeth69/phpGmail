@@ -22,13 +22,13 @@ $mail->oauth->httpc->ua     = "dtmail/1.5"; // Whatever the project name is regi
 
 $mail->formatter->From('name surname <name.surname@gmail.com>');
 $mail->formatter->Subject('Subject Line');
-$mail->formatter->Text("Textonly Content");
+$mail->formatter->Text('Textonly Content');
 		
-$mail->formatter->Recipient(Recipient Address <rec@mail.address>);
+$mail->formatter->Recipient(Recipient Address <rec@mail.address>');
 $mail->formatter->CC('CCd Recipient <ccdrec@mail.address>');
 $mail->formatter->BCC('BCCd Recipient <bccdrec@mail.address>');
 
-$mail->formatter->addAttachment("filepath");
+$mail->formatter->addAttachment('filepath');
 
 $return = $mail->send();
 ```
