@@ -17,14 +17,14 @@ Provides a simple object API which can be used like this.
 $mail = new Gmail();
 $mail->oauth->scope         = 'https://mail.google.com/'; 
 $mail->oauth->user          = 'yourname@gmail.com';
-$mail->oauth->conffile      = "conf.json";  // JSON Conf File for Google Registered APP that allowed to exploit Gmail
-$mail->oauth->httpc->ua     = "dtmail/1.5"; // Whatever the project name is registered from Google Cloud Console
+$mail->oauth->conffile      = 'conf.json';  // JSON Conf File for Google Registered APP that allowed to exploit Gmail
+$mail->oauth->httpc->ua     = 'dtmail/1.5'; // Whatever the project name is registered from Google Cloud Console
 
 $mail->formatter->From('name surname <name.surname@gmail.com>');
 $mail->formatter->Subject('Subject Line');
 $mail->formatter->Text('Textonly Content');
 		
-$mail->formatter->Recipient(Recipient Address <rec@mail.address>');
+$mail->formatter->Recipient('Recipient Address <rec@mail.address>');
 $mail->formatter->CC('CCd Recipient <ccdrec@mail.address>');
 $mail->formatter->BCC('BCCd Recipient <bccdrec@mail.address>');
 
