@@ -68,7 +68,6 @@
 		var $token;
 		var $scope;
 		var $uri;
-		var $url;
 		var $code;
 		var $httpc;
 
@@ -77,7 +76,6 @@
 
 		function __construct($scope=null){
 			$this->uri 		= new stdClass;
-			$this->url 		= new stdClass;
 			$this->client 	= new stdClass;
 			$this->token 	= new stdClass;
 			if($scope != null){
@@ -114,7 +112,6 @@
 			$url = $this->uri->auth."?scope=".urlencode($this->scope)."&redirect_uri=".$this->uri->redirect."&client_id=".$this->client->id."&response_type=code";
 			echo "\n";
 			$this->con->info("Open The Given URL Below, with the Browser and Copy Response Code.");
-			// $this->info("You'll be asked the CODE as many times as the registered accounts.");
 			$this->con->warn("Make sure You logged in with proper user to the provider site.");
 			echo "\n";
 			echo $url."\n";
